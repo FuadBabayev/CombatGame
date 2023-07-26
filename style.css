@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #f4511e;
+}
+#container{
+    margin: auto;
+    max-width: 1300px;
+    overflow: hidden;
+}
+#game{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    }
+#part1 #part3{
+    max-width: 450px;
+    
+}
+img{
+    width: 450px;
+    height: 500px;
+}
+#part2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+button{
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    color: #f4511e;
+    padding: 10px;
+    font-size: 36px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer; 
+    border: none;
+}
+button:hover{
+    background-color: #a13514;
+    color: white;
+}
+button:active{
+    background-color: #2b0a00;
+    box-shadow: 0px 5px rgb(95, 97, 104);
+    transform: translateY(4px);
+}
+#button{
+    display: block;
+    margin: auto;    
+    margin-bottom: 20px;
+    margin-top: 300px;
+}
+p{
+    font-size: 45px;
+    background-color: #2b0a00;
+    color: white;
+}
+
+#part1{
+    position: relative;
+    left: -700px;
+    animation-name: part1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;    
+}
+
+@keyframes part1 {
+    from{
+        left: -700px;
+    }
+    to{
+        left: 0px;
+    }
+}
+
+#part2{
+    position: relative;
+    top: -700px;
+    animation-name: part2;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;    
+}
+
+@keyframes part2 {
+    from{
+        top: -700px;
+    }
+    to{
+        top: 0px;
+    }
+}
+
+#part3{
+    position: relative;
+    right: -700px;
+    animation-name: part3;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;    
+}
+
+@keyframes part3 {
+    from{
+        right: -700px;
+    }
+    to{
+        right: 0px;
+    }
+}

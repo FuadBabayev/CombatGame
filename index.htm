@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ea12fac074.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.8/dist/sweetalert2.all.min.js"></script>
+    <title>Combat Game</title>
+</head>
+<body> 
+<div id="container">
+<div v-if="!GameStart" v-on:click="Start">  <button id="button"> Start Game</button>    </div>
+<div id="game" v-else> 
+            <div id="part1"> 
+            <p> Monster Heal: {{MHeal}}Hp</p>
+            <img src="./img/pic1.jpg" title="Monster">
+            </div>
+                    <div id="part2"> 
+                    <button v-on:click="Attack">Attack <i class="fas fa-hand-rock"></i></button>
+                    <button @click="Special">Special <i class="fas fa-bolt"></i></button>
+                    <button v-on:click="Defance">Defance <i class="fas fa-shield-alt"></i></button>   
+                    <button @click="Surrender">Surrender <i class="far fa-window-close"></i></button>
+                    </div>
+                            <div id="part3"> 
+                            <p> Assassins Heal: {{AHeal}}Hp</p>
+                            <img src="./img/pic2.jpg" title="Assassins">
+                            </div>        
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
